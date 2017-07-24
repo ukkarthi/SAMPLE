@@ -26,28 +26,31 @@ pipeline {
         println("UAT is being performed")
       }
     }
-
-    stages('Browser Tests') {
-      parallel {
-        stage('Chrome') {
-          steps {
-            println "RAMA KRISHNA GOVINDA"
-            echo "Chrome Tests"
+  }
+    stages {
+      stage('Browser Tests') {
+        parallel {
+          stage('Chrome') {
+            steps {
+              println "RAMA KRISHNA GOVINDA"
+              echo "Chrome Tests"
+            }
           }
-        }
-        stage('Firefox') {
-          steps {
-            println "RADHEY SHYAM"
-            echo "Firefox tests"
+          stage('Firefox') {
+            steps {
+              println "RADHEY SHYAM"
+              echo "Firefox tests"
+            }
           }
-        }
-        stage('Internet Explorer') {
-          steps {
-            println "RAMA SITA GOVINDA"
-            echo "IE tests"
+          stage('Internet Explorer') {
+            steps {
+              println "RAMA SITA GOVINDA"
+              echo "IE tests"
+            }
           }
         }
       }
     }
-  }
+
+
 }

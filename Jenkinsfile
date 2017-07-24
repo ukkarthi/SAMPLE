@@ -25,13 +25,5 @@ pipeline {
         println("UAT is being performed")
       }
     }
-      stage('Browser Tests') {
-          stage('Internet Explorer') {
-            steps {
-              println "RAMA SITA GOVINDA"
-              echo "IE tests"
-            }
-          }
-        }
       }
     }

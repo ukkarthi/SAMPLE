@@ -26,8 +26,6 @@ pipeline {
         println("UAT is being performed")
       }
     }
-  }
-    stages {
       stage('Browser Tests') {
         parallel {
           stage('Chrome') {
@@ -51,6 +49,4 @@ pipeline {
         }
       }
     }
-
-
 }

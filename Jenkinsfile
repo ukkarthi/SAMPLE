@@ -3,21 +3,11 @@ pipeline {
 
   stages {
     stage('build') {
-      parallel {
-        stage('Chrome') {
           steps {
             println "RAMA KRISHNA GOVINDA"
             echo "Chrome Tests"
           }
         }
-        stage('Firefox') {
-          steps {
-            println "RADHEY SHYAM"
-            echo "Firefox tests"
-          }
-        }
-      }
-    }
     stage('deploy') {
       steps {
         println("this is the deployment step")

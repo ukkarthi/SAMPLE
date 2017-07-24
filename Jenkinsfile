@@ -10,7 +10,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-        mkdir "C:\Tools\SSS"
+        mkdir C:\Tools\SSS
       }
     }
 

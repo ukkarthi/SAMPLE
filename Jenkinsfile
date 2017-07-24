@@ -27,7 +27,7 @@ pipeline {
       }
     }
 
-    stage('Browser Tests') {
+    stages('Browser Tests') {
       parallel {
         stage('Chrome') {
           steps {

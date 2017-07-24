@@ -3,6 +3,11 @@ pipeline {
 
   stages {
     stage('build') {
+      when {
+        expression {
+          “foo” == “bar”
+        }
+      }
       steps {
         println('Hello World')
         echo 'Building'
@@ -16,6 +21,9 @@ pipeline {
     }
 
     stage('test') {
+      when {
+        environment name: ‘JOB_NAME’, value: ‘foo’
+      }
       steps {
         println ("This is the test step")
       }
